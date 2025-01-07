@@ -87,7 +87,7 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-      <Link href={process.env.NODE_ENV === 'production' ? '/https://nithesh-b.github.io/antechnologies//about' : '/about'}>
+      <Link href={process.env.NODE_ENV === 'production' ? '/antechnologies/about' : '/about'}>
         About
       </Link>
     </div>
