@@ -45,13 +45,14 @@ export default function Home() {
         <ServiceSection 
           title="Platform Engineering" 
           description="Build robust and scalable platforms tailored to your requirements."
-          imageUrl="/placeholder.svg?height=400&width=400&text=Platform+Engineering"
+          imageUrl="https://my.spline.design/matrix-b664bff0ceac7cb4bb1e5310abce5c31/"
           features={[
             "Microservices architecture design",
             "API development and management",
             "Scalable database solutions",
             "Performance optimization and tuning"
           ]}
+          isSplineEmbed={true}
         />
         <ServiceSection 
           title="Data and AI" 
