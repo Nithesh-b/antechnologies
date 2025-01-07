@@ -1,6 +1,7 @@
 import Header from './components/header'
 import Footer from './components/footer'
 import ServiceSection from './components/service-section'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -86,6 +87,9 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      <Link href={process.env.NODE_ENV === 'production' ? '/https://nithesh-b.github.io/antechnologies//about' : '/about'}>
+        About
+      </Link>
     </div>
   )
 }
