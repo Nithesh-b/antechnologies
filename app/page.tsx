@@ -9,10 +9,48 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4">Welcome to AN Technologies</h1>
-            <p className="text-xl mb-8">Empowering businesses with cutting-edge technology solutions</p>
+        <section className="relative overflow-hidden">
+          {/* Background with curved edge */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800">
+            {/* Curved edge at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-16">
+              <svg 
+                className="absolute bottom-0 w-full h-16" 
+                preserveAspectRatio="none" 
+                viewBox="0 0 1440 54"
+              >
+                <path 
+                  fill="white" 
+                  d="M0 54h1440V28.5C1360 10 1120 0 720 0S80 10 0 28.5V54z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="relative container mx-auto px-6 py-32">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+                Welcome to AN Technologies
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Empowering businesses with cutting-edge technology solutions
+              </p>
+              
+              {/* Call-to-action buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-3 bg-white text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-200">
+                  Get Started
+                </button>
+                <button className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors duration-200">
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-72 h-72 bg-white/5 rounded-full filter blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl" />
           </div>
         </section>
 
@@ -70,13 +108,14 @@ export default function Home() {
         <ServiceSection 
           title="Fullstack Development" 
           description="End-to-end development services to bring your ideas to life."
-          imageUrl="/placeholder.svg?height=400&width=400&text=Fullstack+Development"
+          imageUrl="https://my.spline.design/robotfollowcursorforlandingpage-98974077951ecf1a7f476e9228da599b/"
           features={[
             "Custom web application development",
             "Mobile app development (iOS and Android)",
             "Frontend development with modern frameworks",
             "Backend development and API integration"
           ]}
+          isSplineEmbed={true}
         />
 
         {/* Call to Action Section */}
